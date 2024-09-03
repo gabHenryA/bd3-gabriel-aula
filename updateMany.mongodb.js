@@ -8,7 +8,7 @@ const collection = 'LIVRARIA';
 use(database);
 
 /*ALTERA OS DADOS DE UM DOCUMENTO DA COLLECTION*/
-db[collection].updateOne(
-    {titulo:'As Cavernas de Aço'},
-    {$set:{valor:'250'}}
+db[collection].updateMany(
+    {autor:'J.R.R Tolkien'},
+    {$set:{autor:'John Ronald Reuel Tolkien'}}
 )

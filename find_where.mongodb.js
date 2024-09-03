@@ -7,6 +7,6 @@ const collection = 'LIVRARIA';
 /* CRIAR OU ACESSAR O BANCO DE DADOS: */
 use(database);
 
-db[collection].find({"categoria":"Ficção Científica"});
+db[collection].find({"autor":"Isaac Asimov"});
 
 // seria trágico se não fosse cômico e vice-versa
