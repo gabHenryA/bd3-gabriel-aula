@@ -7,8 +7,10 @@ const collection = 'LIVRARIA';
 /* CRIAR OU ACESSAR O BANCO DE DADOS: */
 use(database);
 
-/*ALTERA OS DADOS DE UM DOCUMENTO DA COLLECTION*/
-db[collection].updateOne(
-    {titulo:'As Cavernas de Aço'},
-    {$set:{valor:'250'}}
-)
+/* SELECIONA UM LIVRO DE UMA CATEGORIA OU UM VALOR DETERMINADO */
+db[collection].find({
+    $or:[
+    {categoria:{$eq: 'Fantasia Heroica'}},
+    {valor:{$lte:100}}
+    ]
+})
